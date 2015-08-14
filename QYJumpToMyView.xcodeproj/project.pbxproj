@@ -14,6 +14,7 @@
 		1E89E4E21B7D91D4001D201B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E89E4E11B7D91D4001D201B /* Images.xcassets */; };
 		1E89E4E51B7D91D4001D201B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E89E4E31B7D91D4001D201B /* LaunchScreen.xib */; };
 		1E89E4F11B7D91D4001D201B /* QYJumpToMyViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E89E4F01B7D91D4001D201B /* QYJumpToMyViewTests.m */; };
+		1E89E4FF1B7D98C4001D201B /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E89E4FE1B7D98C4001D201B /* MyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		1E89E4EA1B7D91D4001D201B /* QYJumpToMyViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QYJumpToMyViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E89E4EF1B7D91D4001D201B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E89E4F01B7D91D4001D201B /* QYJumpToMyViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYJumpToMyViewTests.m; sourceTree = "<group>"; };
+		1E89E4FD1B7D98C4001D201B /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		1E89E4FE1B7D98C4001D201B /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				1E89E4D91B7D91D4001D201B /* AppDelegate.m */,
 				1E89E4DB1B7D91D4001D201B /* ViewController.h */,
 				1E89E4DC1B7D91D4001D201B /* ViewController.m */,
+				1E89E4FD1B7D98C4001D201B /* MyViewController.h */,
+				1E89E4FE1B7D98C4001D201B /* MyViewController.m */,
 				1E89E4DE1B7D91D4001D201B /* Main.storyboard */,
 				1E89E4E11B7D91D4001D201B /* Images.xcassets */,
 				1E89E4E31B7D91D4001D201B /* LaunchScreen.xib */,
@@ -221,6 +226,7 @@
 			files = (
 				1E89E4DD1B7D91D4001D201B /* ViewController.m in Sources */,
 				1E89E4DA1B7D91D4001D201B /* AppDelegate.m in Sources */,
+				1E89E4FF1B7D98C4001D201B /* MyViewController.m in Sources */,
 				1E89E4D71B7D91D4001D201B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QYJumpToMyView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QYJumpToMyView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

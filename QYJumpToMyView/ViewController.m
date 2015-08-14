@@ -15,6 +15,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    self.title = @"RootViewController";
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }

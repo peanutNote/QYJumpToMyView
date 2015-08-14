@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "MyViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        if ([application currentUserNotificationSettings].types == UIUserNotificationTypeNone) {
+            UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound categories:nil];
+            [application registerUserNotificationSettings:notificationSettings];
+        }else {
+            [application registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                             UIUserNotificationTypeSound |
+                                                             UIUserNotificationTypeAlert)];
+        }
+    }
     return YES;
 }
 
@@ -28,14 +40,28 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
+    localNotification.alertAction = @"本地通知";
+    localNotification.alertBody = @"点击打开MyViewController";
+    localNotification.applicationIconBadgeNumber = 1;
+    [application scheduleLocalNotification:localNotification];
 }
 
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *myNC = [mainStory instantiateViewControllerWithIdentifier:@"MyView"];
+    [self.window.rootViewController presentViewController:myNC  animated:YES completion:nil];
+}
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [application cancelAllLocalNotifications];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [application setApplicationIconBadgeNumber:0];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
