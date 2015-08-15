@@ -48,6 +48,34 @@
     [application scheduleLocalNotification:localNotification];
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    /*
+     host;
+     port;
+     user;
+     password;
+     path;
+     fragment;
+     parameterString;
+     query;
+     relativePath;
+     */
+    NSLog(@"Calling Application Bundle ID: %@", sourceApplication);
+    NSLog(@"URL scheme:%@", [url scheme]);
+    NSLog(@"URL query: %@", [url query]);
+    NSLog(@"URL host: %@", [url host]);
+    NSLog(@"URL port: %@", [url port]);
+    NSLog(@"URL user: %@", [url user]);
+    NSLog(@"URL password: %@", [url password]);
+    NSLog(@"URL path: %@", [url path]);
+    NSLog(@"URL fragment: %@", [url fragment]);
+    NSLog(@"URL parameterString: %@", [url parameterString]);
+    NSLog(@"URL relativePath: %@", [url relativePath]);
+    
+    return YES;
+}
+
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
     UIStoryboard *mainStory = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>480F9989-E8C4-4BC0-9ADC-0E71AF193AB6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>QYJumpToMyView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>02BEF747993F2937C02C90D4DB11C055508E622F</key>
+		<string>https://github.com/peanutNote/QYJumpToMyView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>QYJumpToMyView.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>02BEF747993F2937C02C90D4DB11C055508E622F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/peanutNote/QYJumpToMyView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>02BEF747993F2937C02C90D4DB11C055508E622F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>02BEF747993F2937C02C90D4DB11C055508E622F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>QYJumpToMyView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
